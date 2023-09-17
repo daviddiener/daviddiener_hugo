@@ -4,6 +4,8 @@ date: 2022-08-30
 tags:
   - studies
   - featured
+cover:
+    image: "cover.png"
 ---
 
 ## Introduction

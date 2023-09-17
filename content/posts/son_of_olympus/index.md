@@ -4,6 +4,8 @@ date: 2022-02-06
 tags: 
   - SonOfOlympus
   - gamedev
+cover:
+    image: "cover.png"
 ---
 
 **Status: Abandoned**

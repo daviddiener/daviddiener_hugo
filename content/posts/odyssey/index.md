@@ -4,6 +4,8 @@ date: 2021-04-30
 tags:
   - webdev
   - gamedev
+cover:
+    image: "cover.png"
 ---
 
 ## The Idea

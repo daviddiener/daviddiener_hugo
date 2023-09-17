@@ -3,6 +3,8 @@ title: Vortex - An Arcade Space Game for Ludum Dare 50
 date: 2022-04-30
 tags:
   - gamedev
+cover:
+  image: "cover.png"
 ---
 
 I recently participated in Ludum Dare 50, a 48-hour game jam where participants create a game based on a randomly selected theme. The theme for this year's jam was "Delay the inevitable."
@@ -18,8 +20,7 @@ The game was a lot of fun to develop, and I'm happy with how it turned out. I ho
 **Here are some screenshots of the game:**
 
 ![Image of the player ship flying through a field of meteors](vortex_1.png)
-![Image of the player ship being pulled towards the sun](vortex_2.png)
-![Image of the leaderboard screen](vortex_3.png)
+![Image of the leaderboard screen](vortex_2.png)
 
 [**You can play Vortex here**](https://davidjs.itch.io/vortex)
 

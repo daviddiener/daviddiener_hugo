@@ -3,6 +3,8 @@ title: How to Setup a 11TY Blog on Github Pages
 date: 2023-03-03
 tags:
   - webdev
+cover:
+    image: "cover.png"
 ---
 
 I recently set up this website to write and host ressoures about my studies, as well as my current gamedev projects. In the past I used overkill solutions like Wordpress to host information about my already abandoned gamedev projects. Later I discovered the static site generator Publii, which I used for quite awhile. And I would still recommend it, especially for non-tech savyy people.
