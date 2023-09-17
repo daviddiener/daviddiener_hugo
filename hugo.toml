@@ -15,6 +15,9 @@ DateFormat = "January 2, 2006"
 defaultTheme = "auto"
 ShowCodeCopyButtons = true
 
+[params.assets]
+favicon = "favicon.ico" 
+
 [params.homeInfoParams]
 Title = "Hi there \U0001F44B"
 Content = "My space for resources on my studies, web- & game development."
@@ -31,20 +34,34 @@ url = "https://www.linkedin.com/in/david-diener"
 SiteVerificationTag = "XYZabc"
 
 [[menu.main]]
-identifier = "archive"
+name = "Server Health"
+url = "/server_health/"
+weight = 9
+
+[[menu.main]]
 name = "Archive"
 url = "/archive/"
 weight = 10
 
 [[menu.main]]
-identifier = "tags"
-name = "tags"
+name = "Tags"
 url = "/tags/"
 weight = 20
 
 [[menu.main]]
-identifier = "example"
-name = "example.org"
-url = "https://example.org"
+name = "DME"
+url = "https://dme.daviddiener.de/"
 weight = 30
- 
+
+[[menu.main]]
+name = "Odyssey"
+url = "https://odyssey.daviddiener.de/"
+weight = 31
+
+[[menu.main]]
+name = "Apollon"
+url = "https://davidjs.itch.io/apollon"
+weight = 32
+
+[markup.goldmark.renderer]
+unsafe= true

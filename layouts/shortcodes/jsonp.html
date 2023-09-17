@@ -1,0 +1,20 @@
+{{ $url := .Get 0 }}
+{{ $data := getJSON $url }}
+<ul>
+    {{ range $item := $data }}
+        <li>
+            <strong>Status:</strong> 
+            {{ if eq $item.status "live" }}
+                <span style="color: green;">{{ $item.status }}</span>
+            {{ else if eq $item.status "suspended" }}
+                <span style="color: red;">{{ $item.status }}</span>
+            {{ else }}
+                {{ $item.status }}
+            {{ end }}
+            <br>
+            <strong>Name:</strong> {{ $item.name }}<br>
+            <strong>Updated At:</strong> {{ $item.updatedAt }}<br>
+            <strong>Region:</strong> {{ $item.region }}
+        </li>
+    {{ end }}
+</ul>
