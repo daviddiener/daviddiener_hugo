@@ -22,7 +22,7 @@ The game was a lot of fun to develop, and I'm happy with how it turned out. I ho
 ![Image of the player ship flying through a field of meteors](vortex_1.png)
 ![Image of the leaderboard screen](vortex_2.png)
 
-[**You can play Vortex here**](https://davidjs.itch.io/vortex)
+{{< button text="You can play Vortex here" link="https://davidjs.itch.io/vortex" >}}
 
 [**Check out the Unity Application on GitHub**](https://github.com/daviddiener/Ludum-Dare-50)
 

@@ -47,13 +47,11 @@ I see a lot of room for improvement and expansion. For instance, the surface det
 
 My seminar paper aims to push the boundaries of what's possible in context-sensitive AR. While there are challenges and limitations, the research sets a strong foundation for future work in this exciting and ever-evolving field.
 
-[**Click here for a short demo.**](https://youtu.be/CQ1pEaBofvI?si=1dmjyDLJFS3hS-aJ)
-
+{{< button text="Click here for a short demo" link="https://youtu.be/CQ1pEaBofvI?si=1dmjyDLJFS3hS-aJ" >}}
 
 If you want to take a look at the full paper, you can download it below.
 
-{{< button href="DXP_Implementation_of_a_context_sensitive_augmented_reality_application.pdf" >}}Download Paper{{< /button >}}
-
+{{< button text="Download Paper" link="DXP_Implementation_of_a_context_sensitive_augmented_reality_application.pdf" >}}
 
 ## References
 

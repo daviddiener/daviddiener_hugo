@@ -1,9 +1,30 @@
-{{ $ref := .Get "href" }}
-{{ $target := "" }}
-{{ with $ref }}
-  {{ $target = "_blank" }}
-{{ end }}
-{{ with .Get "relref" }}
-  {{ $ref = relref $ . }}
-{{ end }}
-<a {{ with $ref }}href="{{.}}" {{ end }} {{ with $target }} target="{{.}}"{{ if eq $target "_blank" }} rel="noreferrer"{{ end }}{{ end }} class="markdown-btn{{ with .Get "class" }} {{ . }}{{ end }}">{{- .Inner | safeHTML -}}</a>
+{{ $buttonText := .Get "text" }}
+{{ $buttonLink := .Get "link" }}
+
+<div class="centered-button">
+  <a href="{{ $buttonLink }}" class="button" target="_blank">{{ $buttonText }}</a>
+</div>
+
+<style>
+.centered-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--theme);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:hover, .button:active {
+  text-decoration: none;
+  background-color: var(--secondary);
+  color: var(--theme);
+}
+
+</style>

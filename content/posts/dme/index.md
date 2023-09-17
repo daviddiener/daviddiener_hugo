@@ -36,7 +36,8 @@ I also formulated three rulesets to guide the extraction of classes, association
 
 The prototype application, developed as part of this research, serves as a compelling proof-of-concept. It underwent rigorous evaluations, both quantitative and qualitative, and the results were promising. The application demonstrated significant time and resource savings while maintaining high levels of accuracy, making it a viable solution for modern software development challenges. Feel free to try out the Data Model Extractor yourself.
 
-{{< button href="https://dme.daviddiener.de/" >}}https://dme.daviddiener.de/{{< /button >}}
+
+{{< button text="https://dme.daviddiener.de/" link="https://dme.daviddiener.de/" >}}
 
 ## Why This Research Matters
 
@@ -48,6 +49,6 @@ While the initial results are promising, there's some room for further research 
 
 Thank you for taking the time to delve into my research. I'm confident that this work represents a significant advancement in the field and has the potential to benefit various stakeholders, including potential employers looking for innovative problem-solving skills. For a more in-depth look, you can access my full thesis below.
 
-{{< button href="Data_model_extraction_through_adaption_of_business_process_models.pdf" >}}Download PDF{{< /button >}}
+{{< button text="Download PDF" link="Data_model_extraction_through_adaption_of_business_process_models.pdf" >}}
 
 Feel free to reach out for any questions, collaborations, or opportunities. I'm always open to engaging in meaningful dialogues that push the boundaries of what's possible in software development.

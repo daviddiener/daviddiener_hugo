@@ -21,9 +21,6 @@ The tool is the culmination of months of hard work and dedication, and I am thri
 
 To see Apollon in action, check out my [YouTube channel](https://www.youtube.com/@daviddiener7531), where I have uploaded videos of my own visualizations using the tool.
 
-{{< button href="https://www.youtube.com/watch?v=m8lnDjjxC5M" >}}Ti Amo Piano Cover | Money Heist{{< /button >}}
+{{< button text="Ti Amo Piano Cover | Money Heist" link="https://www.youtube.com/watch?v=m8lnDjjxC5M" >}}
 
-</br>
-</br>
-
-{{< button href="https://www.youtube.com/watch?v=cq_gIy8JXWM" >}}Comptine D'ete No. 3 - Yann Tiersen{{< /button >}}
+{{< button text="Comptine D'ete No. 3 - Yann Tiersen" link="https://www.youtube.com/watch?v=cq_gIy8JXWM" >}}
