@@ -3,6 +3,7 @@ languageCode = "en-us"
 theme = "PaperMod"
 title = "David Diener"
 googleAnalytics = "G-92F8E6STKT"
+timeout =  “90s”
 
 [minify]
 disableXML = true
