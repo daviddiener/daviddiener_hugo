@@ -6,6 +6,7 @@ tags:
   - gamedev
 cover:
     image: "cover.png"
+weight: 1
 ---
 
 {{< typing_effect

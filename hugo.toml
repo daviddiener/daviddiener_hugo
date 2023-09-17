@@ -1,8 +1,16 @@
 baseURL = "https://daviddiener.de/"
 languageCode = "en-us"
-theme = "PaperMod"
+theme = "PaperModX"
 title = "David Diener"
+
+enableRobotsTXT= true
+buildDrafts= false
+buildFuture= false
+buildExpired= false
+pygmentsUseClasses= true
+
 googleAnalytics = "G-92F8E6STKT"
+
 timeout =  90000
 
 [minify]
@@ -18,7 +26,20 @@ keywords = [ "Blog", "Portfolio", "Gamedev", "Webdev", "Studies", "Research", "D
 author = "David Diener"
 DateFormat = "January 2, 2006"
 defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = false
+ShowShareButtons = false
+ShowPostNavLinks = false
+ShowBreadCrumbs = false
 ShowCodeCopyButtons = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = true
+tocopen = false
+TocSide = "left"
 
 [params.assets]
 favicon = "favicon.ico" 
@@ -28,15 +49,20 @@ Title = "Hi there \U0001F44B"
 Content = "My space for resources on my studies, web- & game development."
 
 [[params.socialIcons]]
-name = "github"
+name = "github-simple"
 url = "https://github.com/daviddiener"
 
 [[params.socialIcons]]
-name = "linkedin"
+name = "linkedin-simple"
 url = "https://www.linkedin.com/in/david-diener"
 
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
+
+[params.cover]
+hidden = false
+hiddenInList = true
+hiddenInSingle = false
 
 [[menu.main]]
 name = "Server Health"
@@ -57,16 +83,22 @@ weight = 20
 name = "DME"
 url = "https://dme.daviddiener.de/"
 weight = 30
+[menu.main.params]
+external = true
 
 [[menu.main]]
 name = "Odyssey"
 url = "https://odyssey.daviddiener.de/"
 weight = 31
+[menu.main.params]
+external = true
 
 [[menu.main]]
 name = "Apollon"
 url = "https://davidjs.itch.io/apollon"
 weight = 32
+[menu.main.params]
+external = true
 
 [markup.goldmark.renderer]
 unsafe= true
