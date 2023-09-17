@@ -1,0 +1,50 @@
+baseURL = "https://daviddiener.de/"
+languageCode = "en-us"
+theme = "PaperMod"
+title = "David Diener"
+googleAnalytics = "G-92F8E6STKT"
+
+
+[params]
+env = "production"
+title = "David Diener"
+description = "The personal blog of David Diener."
+keywords = [ "Blog", "Portfolio", "Gamedev", "Webdev", "Studies", "Research", "David Diener"]
+author = "David Diener"
+DateFormat = "January 2, 2006"
+defaultTheme = "auto"
+ShowCodeCopyButtons = true
+
+[params.homeInfoParams]
+Title = "Hi there \U0001F44B"
+Content = "My space for resources on my studies, web- & game development."
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/daviddiener"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/david-diener"
+
+[params.analytics.google]
+SiteVerificationTag = "XYZabc"
+
+[[menu.main]]
+identifier = "archive"
+name = "Archive"
+url = "/archive/"
+weight = 10
+
+[[menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+identifier = "example"
+name = "example.org"
+url = "https://example.org"
+weight = 30
+ 
