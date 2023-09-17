@@ -4,6 +4,10 @@ theme = "PaperMod"
 title = "David Diener"
 googleAnalytics = "G-92F8E6STKT"
 
+[minify]
+disableXML = true
+minifyOutput = true
+
 
 [params]
 env = "production"
