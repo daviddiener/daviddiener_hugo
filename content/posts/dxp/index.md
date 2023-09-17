@@ -12,7 +12,7 @@ In the ever-evolving landscape of Extended Reality (XR) technology, Augmented Re
 
 <object data="DXP_Poster_DavidDiener.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="DXP_Poster_DavidDiener.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="DXP_Poster_DavidDiener.pdf">Download PDF</a>.</p>
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="DXP_Poster_DavidDiener.pdf">Download Poster</a>.</p>
     </embed>
 </object>
 
@@ -50,7 +50,7 @@ My seminar paper aims to push the boundaries of what's possible in context-sensi
 
 If you want to take a look at the full paper, you can download it below.
 
-{{< button href="DXP_Poster_DavidDiener.pdf" >}}Download PDF{{< /button >}}
+{{< button href="DXP_Implementation_of_a_context_sensitive_augmented_reality_application.pdf" >}}Download Paper{{< /button >}}
 
 
 ## References
