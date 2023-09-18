@@ -40,6 +40,7 @@ hideSummary = false
 showtoc = true
 tocopen = false
 TocSide = "left"
+EnableInstantClick = true
 
 [params.assets]
 favicon = "favicon.ico" 
