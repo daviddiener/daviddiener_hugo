@@ -4,7 +4,6 @@ date: 2020-05-05
 tags:
   - music
   - unity
-  - featured
 cover:
     image: "cover.png"
 ---

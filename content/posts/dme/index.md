@@ -3,7 +3,6 @@ title: Masterthesis - Data Model Extraction Through Adaption Of Business Process
 date: 2023-05-15
 tags:
   - studies
-  - featured
 cover:
     image: "cover.png"
 ---

@@ -3,7 +3,6 @@ title: Exploring Context-Sensitive Augmented Reality - A Seminar Project Overvie
 date: 2022-08-30
 tags:
   - studies
-  - featured
 cover:
     image: "cover.png"
 ---

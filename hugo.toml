@@ -47,7 +47,7 @@ favicon = "favicon.ico"
 
 [params.homeInfoParams]
 Title = "Hi there \U0001F44B"
-Content = "My space for resources on my studies, web- & game development."
+Content = "This is my space for things I find worth sharing about my studies, web- & game development."
 
 [[params.socialIcons]]
 name = "github-simple"
