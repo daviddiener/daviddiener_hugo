@@ -11,7 +11,7 @@ In the world of data analysis and statistical modeling, R is a powerful tool. It
 
 ## The Nostalgic Inspiration
 
-Do you remember those old DVD players with a screensaver that involved a DVD logo bouncing around the screen, seemingly never hitting the edges? It was a simple yet mesmerizing sight, and it used to keep us entertained as we waited for our favorite movie to start. This screensaver is not only nostalgic but also quite iconic.
+Do you remember those old DVD players with a screensaver that involved a DVD logo bouncing around the screen, seemingly never hitting the corners? It was a simple yet mesmerizing sight, and it used to keep us entertained as we waited for the logo to finally hit one of the corners. This screensaver is not only nostalgic but also quite iconic.
 
 ![Original DVD Screensaver](original_dvd_screensaver.gif)
 
