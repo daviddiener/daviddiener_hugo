@@ -124,4 +124,7 @@ So, if you're ready to start crafting your own fantasy world map, give the **Fan
 
 [Visit the Fantasy World Map Generator](https://fwmg.daviddiener.de/) to start mapping your fantasies into reality.
 
-[**Check out FWMG on GitHub**](https://github.com/daviddiener/FantasyWorldMapGenerator)
+{{< button
+text="Check out FWMG on GitHub" 
+link="https://github.com/daviddiener/FantasyWorldMapGenerator" 
+>}}
