@@ -1,5 +1,5 @@
 ---
-title: Having fun with R - The Bouncing DVD Simulator
+title: Having Fun With R - The Bouncing DVD Simulator
 date: 2021-05-13
 tags:
   - misc
