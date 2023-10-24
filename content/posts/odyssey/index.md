@@ -30,7 +30,7 @@ Ever since I had a course on web development in university I never stopped tinke
 Odyssey is not your typical web application. It represents a unique blend of the classic MUD experience, the immersive elements of a simulator, and the depth of a role-playing game. All these elements are woven together into a fantastical web-based world. In Odyssey, players can create multiple characters, each ready to embark on their own adventure. These characters traverse a procedurally generated landscape that consists of diverse regions and cities, where the possibilities for exploration and interaction are virtually limitless.
 
 ## Crafting a Procedural World
-One of Odyssey's standout features is its procedurally generated map, a feature that truly sets it apart from conventional RPGs. To create this ever-changing landscape, I implemented a C# Simplex Noise algorithm. This algorithm generates heightmaps, assigning a value between 0.0 and 1.0 to every coordinate combination of X and Y. These values serve as the foundation for creating a random, dynamic world that evolves with each player's journey. These regions, shaped by these values, are the playgrounds for players to explore, each visit promising unique experiences.
+One of Odyssey's standout features is its procedurally generated map, a feature that truly sets it apart from conventional RPGs. To create this ever-changing landscape, I utilized a Simplex Noise algorithm. This algorithm generates heightmaps, assigning a value between 0.0 and 1.0 to every coordinate combination of X and Y. These values serve as the foundation for creating a random, dynamic world that evolves with each player's journey. These regions, shaped by these values, are the playgrounds for players to explore, each visit promising unique experiences.
 
 ## Under the Hood
 Odyssey is split up into two projects. A backend which hosts all the game objects and handles the game logic and a frontend which calls the backend api and displays the game data accordingly.
@@ -44,15 +44,15 @@ The frontend is powered by the Angular and Phaser.js. Angular provides the sturd
 Behind the scenes, the backend relies on the express.js framework. It functions as a REST API, offering specific routes that expose every facet of the game world. This includes everything from the details of different regions and cities to the characteristics of the characters who inhabit this virtual realm. However, the backend isn't just about data; it also handles essential aspects like user authorization and authentication, ensuring that players' interactions with the game are secure and personalized.
 
 #### Region Generation with Simplex Noise
-One of the standout features of Odyssey is its procedurally generated map, which adds a dynamic and ever-changing aspect to the game world. This is achieved using a C# Simplex Noise algorithm to generate heightmaps. Here's a basic outline of the process:
+One of the standout features of Odyssey is its procedurally generated map, which adds a dynamic and ever-changing aspect to the game world. This is achieved using a Simplex Noise algorithm to generate heightmaps over a set of systematically generated region coordinates. Here's a basic outline of the coordination generation process:
 
 Before delving into the code, it's important to understand why there are two functions, spiralOut and spiralOutPerformance. These functions serve different purposes in the region generation process, and their utilization depends on specific factors.
 
-spiralOut: This function is responsible for generating region coordinates in a spiral pattern. It initializes the x and y coordinates, along with the delta values that dictate the direction of movement. The algorithm calculates these coordinates iteratively and generates a spiral pattern. However, using this function for a large number of iterations can be computationally expensive, and the coordinates need to be recalculated from (0, 0) each time, which can be inefficient as the number of iterations increases.
+**spiralOut**: This function is responsible for generating region coordinates in a spiral pattern. It initializes the x and y coordinates, along with the delta values that dictate the direction of movement. The algorithm calculates these coordinates iteratively and generates a spiral pattern. However, using this function for a large number of iterations can be computationally expensive, and the coordinates need to be recalculated from (0, 0) each time, which can be inefficient as the number of iterations increases.
 
-spiralOutPerformance: To address the computational inefficiency mentioned above, the spiralOutPerformance function is introduced. It optimizes the process by utilizing the existing delta values. If the delta values are already instantiated from previous iterations, this function allows for a much more efficient calculation of the next coordinate. It avoids the need to start from (0, 0) and instead continues from the last calculated coordinate, significantly improving performance.
+**spiralOutPerformance**: To address the computational inefficiency mentioned above, the spiralOutPerformance function is introduced. It optimizes the process by utilizing the existing delta values. If the delta values are already instantiated from previous iterations, this function allows for a much more efficient calculation of the next coordinate. It avoids the need to start from (0, 0) and instead continues from the last calculated coordinate, significantly improving performance.
 
-Now, let's proceed with the code. The combination of the spiral function and Simplex Noise ensures that regions are generated in a visually interesting and unique manner. This adds depth and variety to the game world, making each player's journey a distinct experience.
+Now, let's proceed with the code:
 
 ```
 export let x: number = 0;
@@ -106,13 +106,12 @@ export function spiralOutPerformance(): number[] {
 }
 ```
 
-The combination of the spiral function and Simplex Noise ensures that regions are generated in a visually interesting and unique manner. This adds depth and variety to the game world, making each player's journey a distinct experience.
+After the generation of the region coordinate, a noise value is assigned by using the coordinates as input to the noise algorithm. Simplex Noise then returns the heigth value as noise for the given coordinate. The value is then used for all sorts of procedural settings for the region (city generationm, biome type, ...). The combination of the spiral function and Simplex Noise ensures that regions are generated in a visually interesting and unique manner. This adds depth and variety to the game world, making each player's journey a distinct experience.
 
 #### Pathfinding for Character Movement
-To enable character movement and traversal of regions, the backend incorporates the A* pathfinding algorithm. The PathFinding.js library is used for this purpose. Here's a breakdown of the pathfinding function:
+To enable character movement and traversal of regions, the backend incorporates the A* pathfinding algorithm. The [PathFinding.js](https://github.com/qiao/PathFinding.js/) library is used for this purpose. Here's a breakdown of the pathfinding function:
 
 ```
-// https://github.com/qiao/PathFinding.js/
 import { RegionModel, Region } from '../components/regions/regionModel';
 import PF from 'pathfinding';
 
