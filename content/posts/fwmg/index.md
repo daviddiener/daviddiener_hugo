@@ -44,38 +44,38 @@ No fantasy world is complete without its rivers. To generate them, I used a stra
 
 ```
 // Function to find downhill path for a river
-        const findDownhillPath = (startIdx: number, points: any[], voronoi: any) => {
-            const visited = new Set<number>();
-            let currentIdx = startIdx;
-            const riverPath: number[][] = [];
+const findDownhillPath = (startIdx: number, points: any[], voronoi: any) => {
+    const visited = new Set<number>();
+    let currentIdx = startIdx;
+    const riverPath: number[][] = [];
 
-            while (true) {
-                visited.add(currentIdx);
-                let neighbors = voronoi.neighbors(currentIdx);
-                let nextIdx: number | null = null;
-                let minNoise = points[currentIdx].noise;
+    while (true) {
+        visited.add(currentIdx);
+        let neighbors = voronoi.neighbors(currentIdx);
+        let nextIdx: number | null = null;
+        let minNoise = points[currentIdx].noise;
 
-                for (const neighbor of neighbors) {
-                    if (visited.has(neighbor)) continue;
-                    if (points[neighbor].noise < minNoise) {
-                        minNoise = points[neighbor].noise;
-                        nextIdx = neighbor;
-                    }
-                }
-
-                if (nextIdx !== null && points[nextIdx].type === 'water') {
-                    riverPath.push([points[nextIdx].x, points[nextIdx].y]);  // Include the water cell
-                    break;
-                }
-
-                if (nextIdx === null) break;
-
-                riverPath.push([points[currentIdx].x, points[currentIdx].y]);
-                currentIdx = nextIdx;
+        for (const neighbor of neighbors) {
+            if (visited.has(neighbor)) continue;
+            if (points[neighbor].noise < minNoise) {
+                minNoise = points[neighbor].noise;
+                nextIdx = neighbor;
             }
+        }
 
-            return riverPath;
-        };
+        if (nextIdx !== null && points[nextIdx].type === 'water') {
+            riverPath.push([points[nextIdx].x, points[nextIdx].y]);  // Include the water cell
+            break;
+        }
+
+        if (nextIdx === null) break;
+
+        riverPath.push([points[currentIdx].x, points[currentIdx].y]);
+        currentIdx = nextIdx;
+    }
+
+    return riverPath;
+};
 ```
 
 Here's a simplified breakdown of the function's core logic:
@@ -93,36 +93,34 @@ Lastly, for those finishing touches, I created a custom noise texture algorithm 
 
 ```
 const createNoiseTexture = (width: number, height: number, noiseScale: number, alpha: number, intensity: number) => {
-            const simplex = createNoise2D(alea(''));
+    const simplex = createNoise2D(alea(''));
 
-            const canvas = document.createElement('canvas');
-            canvas.width = width;
-            canvas.height = height;
-            const ctx = canvas.getContext('2d')!;
-            const imgData = ctx.createImageData(width, height);
-        
-            for (let y = 0; y < height; y++) {
-            for (let x = 0; x < width; x++) {
-                const noiseValue = (simplex(x * noiseScale, y * noiseScale) + 1) * 0.5;
-                const adjustedNoiseValue = noiseValue * intensity;  // Adjust intensity here
-                const idx = (y * width + x) * 4;
-                imgData.data[idx] = imgData.data[idx + 1] = imgData.data[idx + 2] = adjustedNoiseValue * 255;
-                imgData.data[idx + 3] = alpha * 255;
-            }
-            }
-        
-            ctx.putImageData(imgData, 0, 0);
-            return canvas;
-        };
+    const canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d')!;
+    const imgData = ctx.createImageData(width, height);
+
+    for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+        const noiseValue = (simplex(x * noiseScale, y * noiseScale) + 1) * 0.5;
+        const adjustedNoiseValue = noiseValue * intensity;  // Adjust intensity here
+        const idx = (y * width + x) * 4;
+        imgData.data[idx] = imgData.data[idx + 1] = imgData.data[idx + 2] = adjustedNoiseValue * 255;
+        imgData.data[idx + 3] = alpha * 255;
+    }
+    }
+
+    ctx.putImageData(imgData, 0, 0);
+    return canvas;
+};
 ```
 
 ## Your Fantasy World Awaits
 
 With the **Fantasy World Map Generator**, the power to craft your dream world is at your fingertips. Whether you're an avid storyteller, a game developer, or simply an adventurer seeking to map uncharted territories, this tool can help you create your own worlds.
 
-So, if you're ready to start crafting your own fantasy world map, give the **Fantasy World Map Generator** a try.
-
-[Visit the Fantasy World Map Generator](https://fwmg.daviddiener.de/) to start mapping your fantasies into reality.
+So, if you're ready to start crafting your own fantasy world map, give the [**Fantasy World Map Generator**](https://fwmg.daviddiener.de/) a try.
 
 {{< button
 text="Check out FWMG on GitHub" 
