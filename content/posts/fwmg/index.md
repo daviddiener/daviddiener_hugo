@@ -20,7 +20,7 @@ Before we delve into the details, let me mention that the **Fantasy World Map Ge
 
 One of the challenges in creating a fantasy world map is achieving the right balance between structure and randomness. In the world of Odyssey, regions are grid-based, starting at coordinates (0, 0) and spiraling outward. [Here](regions.json) is a sample of 100 Odyssey region objects that I use as input data for this project. To add a touch of unpredictability, I decided to perturbate these coordinates based on noise values and proximity to neighboring regions. This approach transforms a seemingly structured world into one that looks and feels much more natural.
 
-Coordinate perturbation is a technique commonly used in data visualization to introduce a controlled level of randomness to data points' positions. By perturbing coordinates, you can create visualizations that appear more natural and less mechanical. The core idea is to add random variations to data points while considering their proximity to neighboring points. The approach I used: 
+Perturbation is a technique commonly used in data visualization to introduce a controlled level of randomness to data points' positions. By perturbing coordinates, you can create visualizations that appear more natural and less mechanical. The core idea is to add random variations to data points while considering their proximity to neighboring points. The approach I used: 
 
 - Identifies neighboring points within a specified range.
 - Uses noise as a seed for randomness.
