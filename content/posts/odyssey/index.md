@@ -23,7 +23,6 @@ text="Start your Odyssey now"
 link="https://odyssey.daviddiener.de" 
 >}}
 
-## The Idea
 Ever since I had a course on web development in university I never stopped tinkering around with webdev projects, especially with the MEAN stack. As I am also a game developer, naturally I tried to combine both skills. The result is a web application named Odyssey, a project that falls somewhere in between a Multi-User Dungeon (MUD), a simulator, and an RPG (Role-Playing Game). While it's far from being a finished product, I'm committed to dedicating my free time to its ongoing development.
 
 ## Uniting Web Development and Gaming

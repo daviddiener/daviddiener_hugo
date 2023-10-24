@@ -7,8 +7,6 @@ cover:
     image: "cover.png"
 ---
 
-## Introduction
-
 In the ever-evolving landscape of Extended Reality (XR) technology, Augmented Reality (AR) holds a special place. This seminar project aims to contribute to the existing body of research by focusing on the practical implementation of context-sensitive AR applications. The project explores two key aspects of context sensitivity: Spatial Arrangement and Physical Factors.
 
 <object data="DXP_Poster_DavidDiener.pdf" type="application/pdf" width="700px" height="700px">
