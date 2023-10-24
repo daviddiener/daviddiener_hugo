@@ -1,5 +1,5 @@
 ---
-title: Odyssey - A MUD simulation environment
+title: Odyssey - A MUD Simulation Environment
 date: 2021-04-30
 tags:
   - webdev
