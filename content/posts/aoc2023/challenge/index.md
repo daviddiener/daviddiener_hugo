@@ -17,15 +17,8 @@ Advent of Code is an Advent calendar of small programming puzzles suitable for v
 I'll be documenting my solutions using Rust. Each day, I'll try to get the next two stars and share my approach, code snippets, and explanations in detail. Feel free to follow along and explore the solutions on my GitHub repository.
 
 ## Days of the Challenge
+{{<has_tag tag="aoc_2023_puzzle">}}
 
-- [Day 1: Trebuchet?!]({{< ref "/posts/aoc2023/day_01" >}})
-- ...and so on until Day 25!
-
-{{< button
-text="Check out my solutions on GitHub" 
-link="https://github.com/daviddiener/AdventOfCode2023" 
->}}
-
-I'm excited to share my solutions with you! You can find all my Rust-based solutions for the Advent of Code 2023 challenges on my GitHub repository. Dive in, explore the code, and feel free to suggest improvements or alternative approaches.
+I'm excited to share my solutions with you! You can find all my Rust-based solutions on my [GitHub repository for Advent Of Code 2023](https://github.com/daviddiener/AdventOfCode2023). Dive in, explore the code, and feel free to suggest improvements or alternative approaches.
 
 Happy coding! 🎄✨

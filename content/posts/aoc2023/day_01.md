@@ -3,30 +3,33 @@ title: AOC 2023 - Day 1 Trebuchet?!
 date: 2023-12-01
 tags:
   - rust
+  - aoc_2023_puzzle
 hidden: true
 ---
 
-## [Overview Advent Of Code 2023]({{< ref "/posts/aoc2023/challenge" >}})
+<div style="text-align: center;">
+    <a href="/posts/aoc2023/challenge">Overview Advent Of Code 2023</a>
+</div>
 
 {{< button
-text="Check out my solutions on GitHub" 
+text="GitHub Repo: AOC2023" 
 link="https://github.com/daviddiener/AdventOfCode2023" 
 >}}
 
 ## Task Description
-You can look up the tasks for day one on the [AOC 2023 website](https://adventofcode.com/2023/day/1). My puzzle input for day one is included in my [AOC 2023 GitHub Repository](https://github.com/daviddiener/AdventOfCode2023/blob/master/src/days/inputs/day_01.txt).
+You can look up the tasks for day one on the [AOC 2023 website](https://adventofcode.com/2023/day/1). My puzzle input for day one is included in my [AOC 2023 GitHub Repository](https://github.com/daviddiener/AdventOfCode2023/blob/master/src/inputs/day_01.txt).
 
 ## Part One: Recover calibration values by combining the first and last digits on each line.
 
 In this part of the puzzle, the task is to recover calibration values by combining the first and last digits present on each line of the input file. The Rust code achieves this by performing the following steps:
 
-- We reads the contents of the input file line by line using BufReader and extract the digits from each line.
-- We filters out non-digit characters, leaving only numeric digits.
+- We read the contents of the input file line by line using BufReader and extract the digits from each line.
+- We filter out non-digit characters, leaving only numeric digits.
 - We take the first and last digits, convert them into numbers, and combine them to form a new number.
 - These new combined numbers are stored in a vector named combined_numbers.
 - Finally, we calculate the sum of all combined numbers and print the result.
 
-The final answer obtained for Part One of the puzzle is **55816*.
+The final answer obtained for part one of the puzzle is *55816*.
 
 ```rust
 pub fn star_one() -> Result<(), std::io::Error> {
@@ -60,7 +63,8 @@ For the second part of the puzzle, the goal is to handle scenarios where numbers
 
 - Setting up up a dictionary spelled_to_int_dict that pairs spelled-out numbers with their respective representations as digits. To cover edge cases, where the spelled out numbers overlap (e.g. eighthree), I include the first and last character of the digit in the replacement value. This was something I overlooked on my first attempt to solve this puzzle.
 - Then we proceed similar, as in part one.
-- The final answer obtained for Part Two of the puzzle is **54980**.
+
+The final answer obtained for part two of the puzzle is *54980*.
 
 ```rust
 pub fn star_two() -> Result<(), std::io::Error> {

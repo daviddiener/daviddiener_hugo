@@ -1,0 +1,28 @@
+{{ $tagText := .Get "tag" }}
+{{$related := .Site.RegularPages.RelatedTo (keyVals "tags" $tagText)}}
+{{$sortedRelated := slice}}
+{{ range .Site.RegularPages.ByDate }}
+  {{ if in .Params.tags $tagText }}
+    {{$sortedRelated = $sortedRelated | append .}}
+  {{ end }}
+{{ end }}
+
+{{ with $sortedRelated }}
+  <ul>
+    {{ range $i, $p := . }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ with .HeadingsFiltered }}
+          <ul>
+            {{ range . }}
+              {{ $link := printf "%s#%s" $p.RelPermalink .ID | safeURL }}
+              <li>
+                <a href="{{ $link }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
