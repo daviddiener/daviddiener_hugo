@@ -105,7 +105,7 @@ export function spiralOutPerformance(): number[] {
 }
 ```
 
-After the generation of the region coordinate, a noise value is assigned by using the coordinates as input to the noise algorithm. Simplex Noise then returns the heigth value as noise for the given coordinate. The value is then used for all sorts of procedural settings for the region (city generationm, biome type, ...). The combination of the spiral function and Simplex Noise ensures that regions are generated in a visually interesting and unique manner. This adds depth and variety to the game world, making each player's journey a distinct experience.
+After the generation of the region coordinate, a noise value is assigned by using the coordinates as input to the noise algorithm. Simplex Noise then returns the height value as noise for the given coordinate. The value is then used for all sorts of procedural settings for the region (city generation, biome type, ...). The combination of the spiral function and Simplex Noise ensures that regions are generated in a visually interesting and unique manner. This adds depth and variety to the game world, making each player's journey a distinct experience.
 
 #### Pathfinding for Character Movement
 To enable character movement and traversal of regions, the backend incorporates the A* pathfinding algorithm. The [PathFinding.js](https://github.com/qiao/PathFinding.js/) library is used for this purpose. Here's a breakdown of the pathfinding function:

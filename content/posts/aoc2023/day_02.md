@@ -24,8 +24,8 @@ You can look up the tasks for day two on the [AOC 2023 website](https://adventof
 In this part of the puzzle, the task is to determine all possible game ids, by checking if the shown amount of cubes of each color exceeds the limit of 12 red cubes, 13 green cubes, and 14 blue cubes.
 
 - We read the contents of the input file line by line using BufReader 
-- Each line is split first by ':' to seperate the game id from the payload of the line. The game id is then obtained by splitting by whitespace. The payload is split first by ';' and then by ',', giving us each cube info (color, amount) of the line. It doesn't really matter which cube info belongs to which set, because we break the loop on the first exceeded cube amount anyways and consider the whole game not possible.
-- If such an event occures, the game is flagged as impossible and not pushed into the possible game ids array at the end of the loop.
+- Each line is split first by ':' to separate the game id from the payload of the line. The game id is then obtained by splitting by whitespace. The payload is split first by ';' and then by ',', giving us each cube info (color, amount) of the line. It doesn't really matter which cube info belongs to which set, because we break the loop on the first exceeded cube amount anyways and consider the whole game not possible.
+- If such an event occurs, the game is flagged as impossible and not pushed into the possible game ids array at the end of the loop.
 - Finally, we calculate the sum of all combined ids and print the result.
 
 The final answer obtained for part one of the puzzle is *3099*.

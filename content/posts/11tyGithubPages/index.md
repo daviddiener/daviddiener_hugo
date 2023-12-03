@@ -7,12 +7,12 @@ cover:
     image: "cover.png"
 ---
 
-I recently set up this website to write and host ressoures about my studies, as well as my current gamedev projects. In the past I used overkill solutions like Wordpress to host information about my already abandoned gamedev projects. Later I discovered the static site generator Publii, which I used for quite awhile. And I would still recommend it, especially for non-tech savyy people.
+I recently set up this website to write and host resources about my studies, as well as my current gamedev projects. In the past I used overkill solutions like Wordpress to host information about my already abandoned gamedev projects. Later I discovered the static site generator Publii, which I used for quite awhile. And I would still recommend it, especially for non-tech savyy people.
 
 But this time I wanted to go for a more minimalistic approach, so I fired up Google and did some research on 'best static site generator reddit'. The most popular solutions seem to include Jekyll, Hugo and 11ty. Being a JavaScript fanboy I had too choose 11ty.
 
 ## Setting up the 11ty page on your local machine
-[11ty](https://www.11ty.dev/) has preety good ressources on how to setup a project in general. I decided to base my website on [this](https://github.com/11ty/eleventy-base-blog) example project provided by 11ty.
+[11ty](https://www.11ty.dev/) has pretty good resources on how to setup a project in general. I decided to base my website on [this](https://github.com/11ty/eleventy-base-blog) example project provided by 11ty.
 
 After setting up the base project make sure that your package.json includes a build script like this:
 
