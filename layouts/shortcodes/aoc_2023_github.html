@@ -1,0 +1,18 @@
+{{ $numDays := 25 }} <!-- Change this number to the total number of days -->
+
+<ul>
+  {{ range $i := seq 1 $numDays }}
+    {{ $AOCdayNum := printf "%d" $i }}
+    {{ $AOClink := printf "https://adventofcode.com/2023/day/%s" $AOCdayNum }}
+
+    {{ $GHdayNum := printf "%02d" $i }}
+    {{ $GHlink := printf "%sday_%s.rs" "https://github.com/daviddiener/AdventOfCode2023/blob/master/src/days/" $GHdayNum }}
+
+
+    <li>
+    <a href="{{ $AOClink }}">AOC Day {{ $GHdayNum }} task description</a>
+    |
+    <a href="{{ $GHlink }}">My solution in GitHub for day {{ $GHdayNum }}</a>
+    </li>
+  {{ end }}
+</ul>
