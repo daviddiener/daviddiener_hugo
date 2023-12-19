@@ -6,6 +6,7 @@ tags:
 layout: single
 cover:
     image: "cover.png"
+draft: true
 ---
 
 Welcome to [Advent of Code 2023](https://adventofcode.com/)! This event is designed by Eric Wastl, packed with daily coding challenges that put your problem-solving skills to the test.
