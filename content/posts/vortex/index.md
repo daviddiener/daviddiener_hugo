@@ -31,12 +31,12 @@ link="https://davidjs.itch.io/vortex"
 
 {{< button
 text="Check out the Unity Application on GitHub" 
-link="https://github.com/daviddiener/Ludum-Dare-50" 
+link="https://github.com/daviddiener/vortex" 
 >}}
 
 {{< button
 text="Check out the Backend Server on GitHub" 
-link="https://github.com/daviddiener/Ludum-Dare-50-Backend" 
+link="https://github.com/daviddiener/vortex-backend" 
 >}}
 
 
