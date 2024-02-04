@@ -95,6 +95,13 @@ weight = 31
 external = true
 
 [[menu.main]]
+name = "Odyssey API"
+url = "/odyssey_api.html"
+weight = 31
+[menu.main.params]
+external = true
+
+[[menu.main]]
 name = "Apollon"
 url = "https://davidjs.itch.io/apollon"
 weight = 32
