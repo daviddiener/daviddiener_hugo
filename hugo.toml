@@ -82,21 +82,21 @@ weight = 20
 
 [[menu.main]]
 name = "DME"
-url = "https://dme.daviddiener.de/"
+url = "https://dme.daviddiener.de"
 weight = 30
 [menu.main.params]
 external = true
 
 [[menu.main]]
 name = "Odyssey"
-url = "https://odyssey.daviddiener.de/"
+url = "https://odyssey.daviddiener.de"
 weight = 31
 [menu.main.params]
 external = true
 
 [[menu.main]]
 name = "Odyssey API"
-url = "/odyssey_api.html"
+url = "/odyssey_api"
 weight = 31
 [menu.main.params]
 external = true
