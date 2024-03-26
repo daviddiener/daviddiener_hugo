@@ -57,6 +57,11 @@ url = "https://github.com/daviddiener"
 name = "linkedin-simple"
 url = "https://www.linkedin.com/in/david-diener"
 
+
+[[params.socialIcons]]
+name = "twitter-simple"
+url = "https://twitter.com/diener_david_"
+
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
 
