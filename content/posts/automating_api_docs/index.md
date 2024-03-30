@@ -57,14 +57,14 @@ TSOA streamlines the documentation process by automatically generating the OAS f
 #### Drawbacks
 However, TSOA necessitates adding annotations to routes, controllers, and enforces specific structures for entity models, which might introduce extra work or conflicts with existing coding styles. Additionally, if your project does not use TypeScript, TSOA might not be a suitable choice due to its TypeScript dependency.
 
-### Postman + P20 + Redoc: A Testing-Driven Approach
+### Postman + p2o + Redoc: A Testing-Driven Approach
 
-This strategy revolves around using Postman, for creating API requests, tests, and saving response examples. The [postman-to-openapi (P20)](https://joolfe.github.io/postman-to-openapi/) library bridges the gap by converting Postman collections into OpenAPI specifications. Finally, [Redoc](https://github.com/Redocly/redoc), an open source tool for generating documentation from OpenAPI, transforms the OAS into user-friendly and interactive API documentation.
+This strategy revolves around using Postman, for creating API requests, tests, and saving response examples. The [postman-to-openapi (p2o)](https://joolfe.github.io/postman-to-openapi/) library bridges the gap by converting Postman collections into OpenAPI specifications. Finally, [Redoc](https://github.com/Redocly/redoc), an open source tool for generating documentation from OpenAPI, transforms the OAS into user-friendly and interactive API documentation.
 
 
-1. **Exporting Your Postman Collection**:  First things first, head over to the "Collection" menu within Postman. Select the "Export" option, and ensure you choose "Collection v2.1" for the export format. This creates a file containing all your API requests and tests.
+1. **Exporting Your Postman Collection**: First things first, head over to the "Collection" menu within Postman. Select the "Export" option, and ensure you choose "Collection v2.1" for the export format. This creates a file containing all your API requests and tests.
 
-2. **Installing P20**:  Next, we'll install P20 (postman-to-openapi).  Open your terminal and use the following command to install P20 using npm: 
+2. **Installing p2o**:  Next, we'll install p2o. Open your terminal and use the following command to install p2o using npm: 
 
 ``` 
 npm i postman-to-openapi -g
@@ -76,10 +76,8 @@ npm i postman-to-openapi -g
 p2o .\Odyssey.postman_collection.json -f .\static\odyssey_api\odyssey_api.yml -o options.json 
 ```
 
-- p2o: This invokes the P20 tool for the conversion.
-- .<path to your Postman collection>.postman_collection.json: Replace this with the actual location of your exported Postman collection file.
-- -f <output file path>: Specify the desired location and filename for the generated OAS file.
-- -o options.json: While not strictly required, this option allows you to provide additional configuration for the conversion process (refer to the P20 documentation for details).
+- -f \<output file path>: Specify the desired location and filename for the generated OAS file.
+- -o options.json: While not strictly required, this option allows you to provide additional configuration for the conversion process (refer to the p2o documentation for details).
 
 
 4. **Setup Redoc**: Finally, we'll integrate Redoc into your web application to present the generated OAS in a user-friendly and interactive format. Here's a code snippet demonstrating how to embed Redoc in your HTML:
@@ -93,8 +91,8 @@ p2o .\Odyssey.postman_collection.json -f .\static\odyssey_api\odyssey_api.yml -o
 </html>
 ```
 
-#### Benefits:
-This approach merges API testing with documentation creation, fostering a more comprehensive development workflow. Moreover, Postman collections can store response examples, which are invaluable for understanding the format and structure of data returned by the API. The postman-to-openapi (P20) library bridges the gap by converting these collections into OpenAPI specifications. This ensures that the generated documentation includes not only endpoint details but also illustrative examples of API responses, which you can save in the Postman collection. For me, this is the most important difference to the other two approaches. By feeding different examples of how the API should respond into the documentation, the users will get a much better understanding on how to actually use your API.
+#### Benefits
+This approach merges API testing with documentation creation, fostering a more comprehensive development workflow. Moreover, Postman collections can store response examples, which are invaluable for understanding the format and structure of data returned by the API. The postman-to-openapi (p2o) library bridges the gap by converting these collections into OpenAPI specifications. This ensures that the generated documentation includes not only endpoint details but also illustrative examples of API responses, which you can save in the Postman collection. For me, this is the most important difference to the other two approaches. By feeding different examples of how the API should respond into the documentation, the users will get a much better understanding on how to actually use your API.
 
 #### Drawbacks
 This approach of course requires you to use Postman for creating API requests and tests. If your workflow doesn't involve Postman, this method might not be the most suitable choice.
@@ -105,7 +103,7 @@ The optimal approach for your project depends on various factors. Consider the f
 
 - Project size and complexity: Larger or more intricate APIs might benefit from TSOA's automation capabilities.
 - Existing codebase: JsDoc integration leverages existing comments, reducing additional documentation overhead.
-- Testing strategy: If testing is a priority, Postman's testing features combined with P20 and Redoc offers the most complete solution. I choose this strategy for Odyssey, as I have a need for automated testing anyways.
+- Testing strategy: If testing is a priority, Postman's testing features combined with p2o and Redoc offers the most complete solution. I choose this strategy for Odyssey, as I have a need for automated testing anyways.
 
 By adopting an automated approach, you can streamline API documentation, reduce maintenance efforts, and ensure your developers and consumers have access to clear and up-to-date API specifications.
 
