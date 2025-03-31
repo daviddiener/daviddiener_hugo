@@ -9,10 +9,6 @@ buildFuture= false
 buildExpired= false
 pygmentsUseClasses= true
 
-googleAnalytics = "G-92F8E6STKT"
-
-timeout =  90000
-
 [minify]
 disableXML = true
 minifyOutput = true
